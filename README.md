@@ -35,5 +35,4 @@ make  update-dashboards   # updates the list of json files that represent
 
 See:
 
-- [How to Collect Docker Daemon Metrics]().
 - [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/).
