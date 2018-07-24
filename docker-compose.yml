@@ -22,12 +22,3 @@ services:
     container_name: 'grafana'
     depends_on:
       - 'pod'
-
-  docker-proxy:
-    build: 'docker-proxy'
-    network_mode: 'service:pod'
-    container_name: 'docker-proxy'
-    depends_on:
-      - 'pod'
-    volumes:
-      - '/var/run/docker.sock:/var/run/docker.sock'

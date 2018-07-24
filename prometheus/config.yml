@@ -7,6 +7,6 @@ scrape_configs:
   - job_name: 'docker'
     static_configs:
       - targets:
-        - 'localhost:2375'
+        - 'host.docker.internal:9100'
         labels:
           instance: 'instance-1'
