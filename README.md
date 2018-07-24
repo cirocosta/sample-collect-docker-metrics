@@ -14,6 +14,9 @@ An example of how to make use of [Prometheus](https://prometheus.io/), [Grafana]
 
 ![Illustration of the Docker metrics collection](https://ops.tips/gists/-/images/docker-daemon-grafana-metrics.png)
 
+<br />
+<br />
+
 ### Usage
 
 ```sh
@@ -26,9 +29,6 @@ make  update-dashboards   # updates the list of json files that represent
                           # the dashboards configured in Grafana.
 
 ```
-
-<br />
-<br />
 
 ### More
 
