@@ -6,6 +6,10 @@
   </a>
 </h5>
 
+<br />
+<br />
+
+
 An example of how to make use of [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/) and [Docker daemon metrics](https://docs.docker.com/config/thirdparty/prometheus/) to graph Docker daemon statistics.
 
 ![Illustration of the Docker metrics collection](https://ops.tips/gists/-/images/docker-daemon-grafana-metrics.png)
@@ -22,6 +26,9 @@ make  update-dashboards   # updates the list of json files that represent
                           # the dashboards configured in Grafana.
 
 ```
+
+<br />
+<br />
 
 ### More
 
