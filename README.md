@@ -1,3 +1,11 @@
+<h1 align="center">Sample Docker daemon metrics collection</h1>
+
+<h5 align="center"><a href="https://ops.tips/gists/how-to-collect-docker-daemon-metrics/">Control your WeDeploy cloud services via a simple RESTful api</a></h5>
+
+An example of how to make use of [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/) and [Docker daemon metrics](https://docs.docker.com/config/thirdparty/prometheus/) to graph Docker daemon statistics.
+
+![Illustration of the Docker metrics collection](http://localhost:1313/gists/-/images/docker-daemon-grafana-metrics.png)
+
 ### Usage
 
 ```sh
@@ -15,5 +23,5 @@ make  update-dashboards   # updates the list of json files that represent
 
 See:
 
-- [How to Collect Docker Daemon Metrics](https://ops.tips/gists/how-to-collect-docker-daemon-metrics/).
+- [How to Collect Docker Daemon Metrics]().
 - [Initializing Grafana with preconfigured dashboards](https://ops.tips/blog/initialize-grafana-with-preconfigured-dashboards/).
