@@ -1,0 +1,33 @@
+version: '3.3'
+services:
+
+  pod:
+    container_name: 'pod'
+    ports:
+      - '9090:9090'
+      - '3000:3000'
+    image: 'alpine'
+    tty: true
+
+  prometheus:
+    build: './prometheus'
+    network_mode: 'service:pod'
+    container_name: 'prometheus'
+    depends_on:
+      - 'pod'
+
+  grafana:
+    build: './grafana'
+    network_mode: 'service:pod'
+    container_name: 'grafana'
+    depends_on:
+      - 'pod'
+
+  docker-proxy:
+    build: 'docker-proxy'
+    network_mode: 'service:pod'
+    container_name: 'docker-proxy'
+    depends_on:
+      - 'pod'
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
