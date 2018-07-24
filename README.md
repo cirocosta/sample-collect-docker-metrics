@@ -12,6 +12,8 @@
 
 An example of how to make use of [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/) and [Docker daemon metrics](https://docs.docker.com/config/thirdparty/prometheus/) to graph Docker daemon statistics.
 
+<br />
+
 ![Illustration of the Docker metrics collection](https://ops.tips/gists/-/images/docker-daemon-grafana-metrics.png)
 
 <br />
