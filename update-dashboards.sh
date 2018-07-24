@@ -3,8 +3,7 @@
 # Updates local dashboard configurations by retrieving
 # the new version from a Grafana instance.
 #
-# The script assumes that basic authentication is configured
-# (change the login credentials with `LOGIN`).
+# The script assumes that no basic authentication is configured.
 #
 # DASHBOARD_DIRECTORY represents the path to the directory
 # where the JSON files corresponding to the dashboards exist.
@@ -17,7 +16,6 @@
 set -o errexit
 
 readonly URL=${URL:-"http://localhost:3000"}
-readonly LOGIN=${LOGIN:-"admin:admin"}
 readonly DASHBOARDS_DIRECTORY=${DASHBOARDS_DIRECTORY:-"./grafana/dashboards"}
 
 
@@ -39,6 +37,9 @@ main() {
 
     echo "$dashboard_json" >$DASHBOARDS_DIRECTORY/$dashboard.json
   done
+
+  echo "DONE"
+  ls $DASHBOARDS_DIRECTORY
 }
 
 
@@ -49,7 +50,6 @@ show_config() {
   Starting dashboard extraction.
   
   URL:                  $URL
-  LOGIN:                $LOGIN
   DASHBOARDS_DIRECTORY: $DASHBOARDS_DIRECTORY
   "
 }
@@ -74,7 +74,6 @@ get_dashboard() {
 
   curl \
     --silent \
-    --user "$LOGIN" \
     $URL/api/dashboards/db/$dashboard |
     jq '.dashboard | .id = null'
 }
@@ -90,7 +89,6 @@ get_dashboard() {
 list_dashboards() {
   curl \
     --silent \
-    --user "$LOGIN" \
     $URL/api/search |
     jq -r '.[] | select(.type == "dash-db") | .uri' |
     cut -d '/' -f2
