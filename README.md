@@ -1,10 +1,14 @@
 <h1 align="center">Sample Docker daemon metrics collection</h1>
 
-<h5 align="center"><a href="https://ops.tips/gists/how-to-collect-docker-daemon-metrics/">Control your WeDeploy cloud services via a simple RESTful api</a></h5>
+<h5 align="center">
+  <a href="https://ops.tips/gists/how-to-collect-docker-daemon-metrics/">
+    How to collect Docker Daemon Metrics
+  </a>
+</h5>
 
 An example of how to make use of [Prometheus](https://prometheus.io/), [Grafana](https://grafana.com/) and [Docker daemon metrics](https://docs.docker.com/config/thirdparty/prometheus/) to graph Docker daemon statistics.
 
-![Illustration of the Docker metrics collection](http://localhost:1313/gists/-/images/docker-daemon-grafana-metrics.png)
+![Illustration of the Docker metrics collection](https://ops.tips/gists/-/images/docker-daemon-grafana-metrics.png)
 
 ### Usage
 
